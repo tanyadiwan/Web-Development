@@ -20,7 +20,7 @@ PicVerse is an innovative text-to-image generator that brings your words to life
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/githubname/picverse.git
+   git clone https://github.com/tanyadiwan/Web-Development/blob/main/Full-Stack%20Websites/PicVerse
 Change into the project directory:
 
 ```bash
