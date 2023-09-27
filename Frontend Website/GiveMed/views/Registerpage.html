@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="../static/CSS/registration.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/JAVASCRIPT/registration.js"></script>
+
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" id="t1" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" id="t2" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" id="t3" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="date" id= "t4" placeholder="Enter your DOB" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" id="t5" placeholder="Enter your Address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" id="t6" placeholder="Enter your Mobile No." required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" id="t7" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" id="t8" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category" id="t9">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+          <input type="radio" name="select" id="dot-new-1">
+          <input type="radio" name="select" id="dot-new-2">
+        </div>
+        <div class="button">
+          <input type="reset" value="Clear" onclick="clearFunc()" >
+          <input type="submit" value="Register" onclick="registration()">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

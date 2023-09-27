@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../static/CSS/contact.css">
+    <!-- <script src="../static/JAVASCRIPT/contact.js"></script> -->
+
+    
+</head>
+<body>
+        <div class="wrapper">
+          <h2>CONTACT US</h2>
+          <form action="" onsubmit="" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="Name" id="name" placeholder="Full Name" required minlength="3" maxlength="25" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" name="Email" id="email" placeholder="email@" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea name="Message" id="message" rows="5" placeholder="Type your message here...."></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="submit"><i class="far fa-paper-plane"></i>Send</button>
+              <!-- <input type="submit" class="Submit" class="far fa-paper-plane" onClick="Submit()" />  -->
+            </div>
+          </form>
+        </div>
+      
+</body>
+</html>

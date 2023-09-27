@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+
+
+#aboutheading{
+    display: flex;
+    margin: 1.2rem;
+    height: 155px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+    /* background-image: url("../pictures/aboutus_img.jpg"); */
+    background: url("../pictures/aboutus_img.jpg") no-repeat center center/cover;
+
+}
+.mission{
+    margin-top: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2{
+    color: black;
+    font-size: 1.5rem;
+ }
+ .mission p{
+     color: rgb(5, 77, 77);
+     font-style: bold;
+     font-size: 1.2em;
+ }
+ .problem{
+     margin-top: 1.2em;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     font-style: bold;
+     font-weight: bolder;
+ }
+ .problem h2{
+     color: rgb(0, 51, 51);
+     font-size: 1.7rem;
+ }
+ .problem h5{
+     color: black;
+     font-size: 0.6rem;
+ }
+
+/* .heading{
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 12px;
+} */
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82vh;
+}
+.card{
+    width: 400px;
+    height: 380px;
+    color: rgb(0, 0, 0);
+    margin: 1em;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1.5em;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.card::before, .card::after{
+    content: '';
+    position: absolute;
+    background: #050404;
+    width: 100%;
+    height: 40%;
+    z-index: -10;
+    border-radius: 15px 15px 0 0;
+    transition: all .4s;
+}
+.card::before{
+    top: 0;
+}
+.card:hover::before{
+    transform: translateY(-20px);
+}
+.card::after{
+    bottom: 10px;
+    height: 60%;
+    border-radius: 0 0 15px 15px;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+    background: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.card:hover .icon{
+    box-shadow: 0 0 10px teal;
+}
+.icon i{
+    font-size: 1.5em;
+}
+.card p{
+    margin: 0.5em 0;
+    font-size: 0.8em;
+    display: none;
+    opacity: 0;
+    transition: all .4s;
+}
+.card:hover p{
+    display: block;
+    opacity: 1;
+}
+.card h4{
+    margin-top: 0.5em;
+}
+
+

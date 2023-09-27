@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Medicine Donation </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/CSS/admin_navbar.css" />
+    <link rel="stylesheet" href="../static/CSS/Footer.css" />
+    <script src="../static/JAVASCRIPT/managemember.js"></script>
+    <!-- <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/login.css" />  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="admin-page">
+
+    <!-- NAVBAR...........AND LOGO...........  -->
+    <header>
+        <p class="Logo">Medicine Donation System</p>
+        <!-- <input type="checkbox" name="" class="btn" /> -->
+        <!-- <div class="nav">
+            <ol>
+                <li><a href="#">Manage Member</a></li>
+                <li><a href="#">Manage NGO</a></li>
+                <li><a href="#">Manage Approval</a></li>
+                <li><a href="#">Reporting</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ol>
+        </div> -->
+
+    </header>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for adding -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Member id</label>
+                            <input type="text" class="form-control" id="t1" placeholder="Enter Member id">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Member Name</label>
+                            <input type="text" class="form-control" id="t2" placeholder="Enter Member Name">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Gender</label>
+                            <input type="text" class="form-control" id="t3" placeholder="Enter Gender">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Age</label>
+                            <input type="text" class="form-control" id="t4" placeholder="Enter Age">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Contact no.</label>
+                            <input type="text" class="form-control" id="t5" placeholder="Enter Contact number">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Email</label>
+                            <input type="text" class="form-control" id="t6" placeholder="Enter Email">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Address</label>
+                            <input type="text" class="form-control" id="t7" placeholder="Enter Address">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter City</label>
+                            <input type="text" class="form-control" id="t8" placeholder="Enter City">
+
+                        </div>
+                    </form>
+                    <!-- Form for adding -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <input type="button" value="Save Changes" class="btn btn-primary" onclick="managemember()"> -->
+                    <input type="submit" value="Save Changes" class="btn btn-primary" onClick="managemember()" />  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- for edit -->
+    <!-- Modal -->
+    <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for adding -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Member id</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Member id">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Member Name</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Member Name">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Gender</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Gender">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Age</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Age">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Contact no.</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Contact number">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Email</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Email">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Address</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter Address">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter City</label>
+                            <input type="text" class="form-control" id="" placeholder="Enter City">
+
+                        </div>
+                    </form>
+                    <!-- Form for adding -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="managemember()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOR EDIT -->
+
+    <!-- NAVBAR...........AND LOGO........... -->
+
+    <!-- {% comment %} Tabel start {% endcomment %} -->
+    <div class="card-body">
+        <table class="table table-dark table-hover table-bordered">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <button class="btn btn-success badge-pill" data-bs-toggle="modal" data-bs-target="#add"
+                        style="width: 80px;">ADD</button>
+                </div>
+            </div>
+            <br>
+            <h1>Tabels</h1>
+            <thead>
+                <tr>
+                    <th scope="col">Member ID</th>
+                    <th scope="col">Member Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Contact No.</th>
+                    <th scope="col">Email ID</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
+                    <th class="text-right">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td class="text-right">
+                        <button class="btn btn-primary badge-pill" data-bs-toggle="modal"
+                            data-bs-target="#edit">Edit</button>
+                        <button class="btn btn-danger badge-pill">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td class="text-right">
+                        <button class="btn btn-primary badge-pill">Edit</button>
+                        <button class="btn btn-danger badge-pill">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td class="text-right">
+                        <button class="btn btn-primary badge-pill">Edit</button>
+                        <button class="btn btn-danger badge-pill">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class='footer-container'>
+            <section class="footer-subscription">
+                <p class="footer-subscription-heading">
+                    Join the campaign
+                </p>
+                <p class='footer-subscription-text'>
+                    you can join campaign any time...........
+                </p>
+                <div class='input-areas'>
+                    <form>
+                        <input type="email" name="email" placeholder="Your Email" className='footer-input' />
+
+                        <Button buttonStyle='btn--outline'>Subscribe</Button>
+                    </form>
+                </div>
+            </section>
+            <div class='footer-links'>
+                <div class='footer-links-wrapper'>
+                    <div class='footer-links-items'>
+                        <h2>About us</h2>
+                        <Link to='/sign-up'>How it works..</Link>
+                        <Link to='/'>Testimonials</Link>
+                        <Link to='/'>Careers</Link>
+                        <Link to='/'>Investors</Link>
+                        <Link to='/'>Terms of Services</Link>
+
+                    </div>
+                    <div class='footer-links-items'>
+                        <h2>Contact us</h2>
+                        <Link to='/sign-up'>How it works..</Link>
+                        <Link to='/'>Testimonials</Link>
+                        <Link to='/'>Careers</Link>
+                        <Link to='/'>Investors</Link>
+                        <Link to='/'>Terms of Services</Link>
+
+                    </div>
+
+                </div>
+                <div class='footer-links-wrapper'>
+                    <div class='footer-links-items'>
+                        <h2>Videos</h2>
+                        <Link to='/'>Submit Video</Link>
+                        <Link to='/'>Ambassadors</Link>
+                        <Link to='/'>Agencys</Link>
+                        <Link to='/'>Influencers</Link>
+
+                    </div>
+                    <div class='footer-links-items'>
+                        <h2>Social Media</h2>
+                        <Link to='/'>Instagram</Link>
+                        <Link to='/'>Facebook</Link>
+                        <Link to='/'>Youtube</Link>
+                        <Link to='/'>Twitter</Link>
+                        <Link to='/'>LinkedIn</Link>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <section class='social-media'>
+                <div class='social-media-wrap'>
+                    <div class='footer-logo'>
+                        <Link to="/" class='social-logo'>
+                        medicine donation system <i class='fab fa-typo3'></i>
+                        </Link>
+
+                    </div>
+                    <small class='website-rights'>Medicine Donation System @2021</small>
+                    <div class='social-icons'>
+                        <Link class="social-icon-link facebook" to="/" target="_blank" aria-label='Facebook'>
+                        <i class="fab fa-facebook-f"></i>
+                        </Link>
+                        <Link class='social-icon-link instagram' to="https://www.instagram.com/" target="_blank"
+                            aria-label='Instagram'>
+                        <i class='fab fa-instagram'></i>
+                        </Link>
+                        <Link class='social-icon-link twitter' to="/" target="_blank" aria-label='Twitter'>
+                        <i class='fab fa-twitter'></i>
+                        </Link>
+                        <Link class='social-icon-link youtube' to="/" target="_blank" aria-label='Youtube'>
+                        <i clase='fab fa-youtube'></i>
+                        </Link>
+                        <Link class='social-icon-link linkedin' to="/" target="_blank" aria-label='LinkedIn'>
+                        <i class='fab fa-linkedin-f'></i>
+                        </Link>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </footer>
+    <!-- FOOTER......... -->
+</body>
+
+</html>

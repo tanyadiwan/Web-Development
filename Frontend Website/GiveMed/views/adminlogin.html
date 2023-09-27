@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login Panel</title>
+    <link rel="stylesheet" href="../static/CSS/adminlogin.css" />
+    
+    <!-- <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            height: 100vh;  
+            background:rgb(199, 215, 218);
+        }
+        div.container{
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 5 0 50px -50px darkslategray; */
+            background: black;
+            width: 350px;
+            height: 450px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding: 2em;
+            
+        }
+        div.container div.myform{
+            width: 270px;
+            margin-right: 30px;
+        }
+        div.container div.myform h2{
+            color: white;
+            margin-bottom: 20px;
+        }
+        div.container div.myform input{
+            /* border: none;
+            border-radius:10px ;
+            width: 100%;
+            border-bottom: 2px solid #1c1c1c;
+            font-size: 14px;
+            /* position: absolute; */
+            margin-bottom: 25px;
+            padding: 7px 0; 
+            width: 100%;
+            background: teal; 
+            color: white;
+            border: none;
+            outline: none;
+            /* padding-left: 0.8em; */
+            border-radius: 10px;
+            transition: all .4s
+        }
+        div.container div.myform btn{
+            color: white;
+            background-color:teal;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            font-size: 14px;
+            padding: 5px 12px;
+            font-weight: 500;
+        }
+        div .container div .myform ::placeholder{
+         color: white;
+        }
+        
+        </style> -->
+        
+        <script src="../static/JAVASCRIPT/adminloginvalidate.js"></script>
+        </head>
+        
+        <body>
+            <!-- <div class="container">
+                
+                <div class="myform">
+                    <input type="text" placeholder="Enter user name here" id="email" class="tb" />
+                    <input type="password" placeholder="Enter Password here" id="pwd1" class="tb" />
+                    <input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+                    <input type="submit" value="Login" class="btn" onClick="login()" />
+                </form>
+                </div>
+                </div> -->
+                <div class="container">
+                    <p class="heading">Login in</p>
+                    <div class="box">
+                        <p>Email</p>
+                        <div>
+                            <input type="email" name="" id="email" placeholder="Enter Your Email">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <p>Password</p>
+                        <div>
+                            <input type="password" name="" id="pwd1" placeholder="Enter Your Password">
+                        </div>
+                    </div> 
+                    <input type="submit" value="Reset" onclick="clearFunc()" class="loginBtn" />
+                    <input type="submit" value="Login" class="loginBtn" onClick="login()" />
+                    <!-- <button class="loginBtn">Login</button>  -->
+                </div>
+                
+        <!-- <p class="text">Dont have an account? <a href="#">Sign up</a></p> -->
+</body>
+
+</html>
